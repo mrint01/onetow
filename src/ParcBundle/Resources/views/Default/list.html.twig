@@ -1,0 +1,24 @@
+
+<center><br><br>
+    <h1>List Model From DataBase</h1>
+<table border=""1">
+<tr>
+    <td>id</td>
+    <td>Libelle</td>
+    <td>Pays</td>
+    <td>Supprimer</td>
+</tr>
+<tr>
+    {%  for modele in modeles  %}
+    <tr>
+    <td>{{  modele.id }}</td>
+    <td>{{  modele.libelle }}</td>
+    <td>{{  modele.pays}}</td>
+    <td><a href="{{ path('parc_supp_modele',{'id':modele.id}) }}">Supprimer</a></td>
+</tr>
+{%  endfor %}
+
+</table>
+<h2><a href="{{ path('parc_homepage') }}">Retour</a> </h2>
+
+</center>

@@ -1,3 +1,11 @@
+parc:
+    resource: "@ParcBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
+
+parc_2:
+    resource: "@ParcBundle/Controller/"
+    prefix:   /

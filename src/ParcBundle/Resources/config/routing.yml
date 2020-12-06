@@ -1,0 +1,17 @@
+parc_homepage:
+    path:     /
+    defaults: { _controller: ParcBundle:Default:index }
+
+parc_affichage_modele:
+    path: /listModele
+    defaults: {_controller: ParcBundle:Modele:list }
+
+
+parc_affichage_modele_By_Id:
+    path: /Model/{id}
+    defaults: {_controller: ParcBundle:Modele:list_modele_byID }
+
+
+parc_supp_modele:
+    path: /suppModele/{id}
+    defaults: {_controller: ParcBundle:Modele:suppModel }

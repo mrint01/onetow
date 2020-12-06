@@ -1,0 +1,30 @@
+<center><br><br>
+
+    <h1>List Voiture From DataBase</h1>
+<table border=""1">
+<tr>
+
+    <td>id</td>
+    <td>Serie</td>
+    <td>DateMiseCirculation</td>
+    <td>Marque</td>
+    <td>modele_id</td>
+    <td>Supprimer</td>
+</tr>
+<tr>
+    {%  for voiture in voitures  %}
+<tr>
+    <td>{{  voiture.id }}</td>
+    <td>{{  voiture.Serie }}</td>
+    <td>{{  voiture.DateMiseCirculation}}</td>
+    <td>{{  voiture.Marque}}</td>
+    <td><a href="{{ path('parc_affichage_modele_By_Id',{'id':voiture.Modele.id}) }}">{{  voiture.Modele.id}}</a></td>
+
+    <td><a href="{{ path('supp_v',{'id':voiture.id}) }}">Supprimer</a></td>
+</tr>
+{%  endfor %}
+
+
+</table>
+<h2><a href="{{ path('parc_homepage') }}">Retour</a> </h2>
+</center>
